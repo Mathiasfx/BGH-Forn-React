@@ -1,16 +1,12 @@
-
-import './App.css';
-import Menu from './components/Menu/Menu';
+import "./App.css";
+import Menu from "./components/Menu/Menu";
+import FormularioView from "./Views/Formulario/FormularioView";
 
 function App() {
   return (
     <div className="App">
-     
-        <Menu/>
-        
-       
-      
-    
+      <Menu />
+      <FormularioView />
     </div>
   );
 }

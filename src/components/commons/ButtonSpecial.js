@@ -1,5 +1,6 @@
 import React from "react";
 import "./Button.css";
+import iconSalve from "../../assets/images/icons/salve.png";
 
 const ButtonSpecial = ({ navbar }) => {
   return (
@@ -7,12 +8,8 @@ const ButtonSpecial = ({ navbar }) => {
       className={navbar ? "btn-primario blanco" : "btn-primario"}
       id="cotizar"
     >
-      <img
-        className="icono-btn"
-        src="/src/images/icons/lupa.svg"
-        alt="icono estado"
-      />
-      COTIZÁ
+      <img className="icono-btn" src={iconSalve} alt="icono estado" />
+      Solicitar Asistencia
     </span>
   );
 };

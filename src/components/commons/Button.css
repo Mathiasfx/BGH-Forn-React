@@ -1,26 +1,26 @@
 /*Estilo Boton Primario Cotiza*/
 .btn-primario {
-  background: #db3939;
+  background: #00918f;
   border-radius: 100px;
   height: 40px;
-  width: 7.7rem;
+  width: 11.5rem;
   font-size: 0.95rem;
   font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 125px;
   cursor: pointer;
   transition: all 0.1s;
 }
 /*Estilo Icono Boton*/
 .icono-btn {
   margin-right: 11px;
+  width: 1.5rem;
 }
 /*Letra blanca en menu inverso*/
 .blanco {
   color: #fff;
-  background-color: #11216c;
+  background-color: #00918f;
   transition: all 0.1s;
 }
 #cotizar {

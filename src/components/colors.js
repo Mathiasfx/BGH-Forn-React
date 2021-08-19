@@ -1,0 +1,14 @@
+export let colorprincipal = "#0E194F";
+export let Medium_Green = "#00918f";
+export let Oficial_Blue = "#3872E6";
+export let White = "#FEFEFE";
+export let Navy_Blue = "#11216C";
+export let Light_Gray_BG = "#f3f4f8";
+export let Sky_Blue_BG = "linear-gradient(180deg, #3A86F7 0%, #FFFFFF 100%)";
+export let Medium_Blue_Gray = "#596394";
+export let Medium_Gray = "#A2A9CC";
+export let Sand = "#F6F5E8";
+export let Gray = "#646A7E";
+export let Light_Green = "#6CE194";
+export let Orange = "#FF7E27";
+export let Red = "#DA3F40";
