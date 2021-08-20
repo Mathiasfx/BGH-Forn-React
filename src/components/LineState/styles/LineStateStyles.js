@@ -30,7 +30,9 @@ export const Timeline = styled.div`
     min-height: 80px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    ${mobile} {
+      width: 100%;
+    }
   }
   //Circulo
   && .timeline__circle {
@@ -57,9 +59,7 @@ export const Timeline = styled.div`
     width: 20%;
     height: 32px;
     //en mobile
-    ${mobile} {
-      width: 26%;
-    }
+
     //texto
     & p {
       font-style: normal;

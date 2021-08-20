@@ -9,8 +9,10 @@ const Form = () => {
           name="sitios"
           id="select_sitios"
           form="siteform"
-          className="FormContainer_select"
+          className="FormContainer_select form-select"
         >
+          <option selected>Seleccionar ...</option>
+
           <option className="FormContainer_option" value="C03-CAIF-VISTA-LINDA">
             (C03) CAIF - VISTA LINDA
           </option>
@@ -29,8 +31,9 @@ const Form = () => {
           name="asistencia"
           id="select_asistencia"
           form="siteform"
-          className="FormContainer_select"
+          className="FormContainer_select form-select"
         >
+          <option selected>Seleccionar ...</option>
           <option className="FormContainer_option" value="Pedido de Reparacion">
             Pedido de Reparación
           </option>
@@ -46,37 +49,45 @@ const Form = () => {
           ¿Cuál es el nivel de criticidad del incidente?
         </h3>
         <div className="FormContainer_checkContainer">
-          <label class="FormContainer_checkCard">
-            <input
-              type="checkbox"
-              name="Vehiculo"
-              id="autovia"
-              value="autovia"
-            ></input>
+          <input
+            type="radio"
+            class="btn-check FormContainer_checkCard"
+            id="btn-check-outlined1"
+            name="options"
+            autocomplete="off"
+          />
+          <label className="btn btn-outline-primary" for="btn-check-outlined1">
+            Single toggle
           </label>
-          <label class="FormContainer_checkCard">
-            <input
-              type="checkbox"
-              name="Vehiculo"
-              id="autovia"
-              value="autovia"
-            ></input>
+          <input
+            type="radio"
+            class="btn-check FormContainer_checkCard"
+            id="btn-check-outlined2"
+            name="options"
+            autocomplete="off"
+          />
+          <label className="btn btn-outline-primary" for="btn-check-outlined2">
+            Single toggle
           </label>
-          <label class="FormContainer_checkCard">
-            <input
-              type="checkbox"
-              name="Vehiculo"
-              id="autovia"
-              value="autovia"
-            ></input>
+          <input
+            type="radio"
+            class="btn-check FormContainer_checkCard"
+            id="btn-check-outlined3"
+            name="options"
+            autocomplete="off"
+          />
+          <label className="btn btn-outline-primary" for="btn-check-outlined3">
+            Single toggle
           </label>
-          <label class="FormContainer_checkCard">
-            <input
-              type="checkbox"
-              name="Vehiculo"
-              id="autovia"
-              value="autovia"
-            ></input>
+          <input
+            type="radio"
+            class="btn-check FormContainer_checkCard"
+            id="btn-check-outlined4"
+            name="options"
+            autocomplete="off"
+          />
+          <label className="btn btn-outline-primary" for="btn-check-outlined4">
+            Single toggle
           </label>
         </div>
         <button className="FormContainer_submit" type="submit">
