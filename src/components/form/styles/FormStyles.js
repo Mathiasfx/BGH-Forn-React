@@ -69,7 +69,6 @@ export const FormContainer = styled.div`
     font-size: 1.2em;
     padding: 1.2rem;
     align-items: center;
-
     text-align: center;
   }
 
