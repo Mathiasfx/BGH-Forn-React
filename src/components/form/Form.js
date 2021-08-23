@@ -11,7 +11,9 @@ const Form = () => {
           form="siteform"
           className="FormContainer_select form-select"
         >
-          <option selected>Seleccionar ...</option>
+          <option selected value="Default Value">
+            Seleccionar ...
+          </option>
 
           <option className="FormContainer_option" value="C03-CAIF-VISTA-LINDA">
             (C03) CAIF - VISTA LINDA
@@ -51,43 +53,82 @@ const Form = () => {
         <div className="FormContainer_checkContainer">
           <input
             type="radio"
-            class="btn-check FormContainer_checkCard"
+            class="btn-check"
             id="btn-check-outlined1"
             name="options"
             autocomplete="off"
           />
-          <label className="btn btn-outline-primary" for="btn-check-outlined1">
-            Single toggle
+          <label
+            className="btn FormContainer_checkCard"
+            for="btn-check-outlined1"
+          >
+            <div className="FormContainer_checkCard_title col-9">
+              <div className="FormContainer_checkCard_title_alert">
+                Se enviará alerta prioritaria
+              </div>
+              <h4>Crítico</h4>
+              <p>* Máxima prioridad. Se atiende ASAP</p>
+            </div>
+            <div className="FormContainer_checkCard_radiobtn col-3">
+              <div className="FormContainer_checkCard_radiobtn_check"></div>
+            </div>
           </label>
           <input
             type="radio"
-            class="btn-check FormContainer_checkCard"
+            className="btn-check FormContainer_checkCard"
             id="btn-check-outlined2"
             name="options"
             autocomplete="off"
           />
-          <label className="btn btn-outline-primary" for="btn-check-outlined2">
-            Single toggle
+          <label
+            className="btn FormContainer_checkCard"
+            for="btn-check-outlined2"
+          >
+            <div className="FormContainer_checkCard_title col-9">
+              <h4>Prioritario</h4>
+              <p>* Se atiende dentro del próximo día habil</p>
+            </div>
+            <div className="FormContainer_checkCard_radiobtn col-3">
+              <div className="FormContainer_checkCard_radiobtn_check"></div>
+            </div>
           </label>
           <input
             type="radio"
-            class="btn-check FormContainer_checkCard"
+            className="btn-check FormContainer_checkCard"
             id="btn-check-outlined3"
             name="options"
             autocomplete="off"
           />
-          <label className="btn btn-outline-primary" for="btn-check-outlined3">
-            Single toggle
+          <label
+            className="btn FormContainer_checkCard"
+            for="btn-check-outlined3"
+          >
+            <div className="FormContainer_checkCard_title col-9">
+              <h4>Regular</h4>
+              <p>*Se atiende dentro de las próximas 96hs</p>
+            </div>
+            <div className="FormContainer_checkCard_radiobtn col-3">
+              <div className="FormContainer_checkCard_radiobtn_check"></div>
+            </div>
           </label>
           <input
             type="radio"
-            class="btn-check FormContainer_checkCard"
+            className="btn-check "
             id="btn-check-outlined4"
             name="options"
             autocomplete="off"
           />
-          <label className="btn btn-outline-primary" for="btn-check-outlined4">
-            Single toggle
+          <label
+            className="btn FormContainer_checkCard"
+            for="btn-check-outlined4"
+          >
+            <div className="FormContainer_checkCard_title col-9">
+              <h4>Baja</h4>
+              <p>*Se atiende en próxima visita preventiva.</p>
+            </div>
+            <div className="FormContainer_checkCard_radiobtn col-3">
+              <div className="FormContainer_checkCard_radiobtn_check"></div>
+            </div>
           </label>
         </div>
         <button className="FormContainer_submit" type="submit">

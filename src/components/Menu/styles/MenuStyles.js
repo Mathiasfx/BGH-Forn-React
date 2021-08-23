@@ -1,5 +1,12 @@
 import styled from "styled-components";
 import Logo from "../../../assets/images/logo.png";
+
+//Versiones Mobile y Desktop
+export const desktopStartWidth = 814;
+export const tabletStartWidth = 1024;
+export const mobile = `@media (max-width: ${desktopStartWidth}px)`;
+export const tablet = `@media (max-width: ${tabletStartWidth}px)`;
+
 export const MenuContainer = styled.div`
   /*Estilos Menu Arriba*/
   && .navbar-top {
@@ -7,6 +14,14 @@ export const MenuContainer = styled.div`
     height: 32px;
     background-color: #00918f;
     position: sticky;
+
+    ${tablet} {
+      display: none;
+    }
+
+    ${mobile} {
+      display: none;
+    }
   }
   /*Estilos Iconos Arriba Estado-region-Micuenta*/
   && .iconos-top {
@@ -155,6 +170,13 @@ export const MenuContainer = styled.div`
     z-index: 1;
     transition: 0.3s;
     box-shadow: 0px 2px 3px rgba(146, 153, 186, 0.2);
+    ${tablet} {
+      top: 0;
+    }
+
+    ${mobile} {
+      top: 0;
+    }
   }
   && .navbar-main-blanco a {
     text-align: center;
@@ -225,6 +247,14 @@ export const MenuContainer = styled.div`
     background-repeat: no-repeat;
     background-size: 0% 2px;
     transition: background-size 0.3s;
+
+    ${tablet} {
+      display: none;
+    }
+
+    ${mobile} {
+      display: none;
+    }
   }
 
   && .navbar-navitem li:hover {
@@ -296,6 +326,8 @@ export const MenuContainer = styled.div`
     }
     .open-menuresponsive {
       cursor: pointer;
+      margin-top: 1rem;
+      margin-left: 0.5rem;
     }
   }
 

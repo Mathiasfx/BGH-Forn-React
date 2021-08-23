@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ButtonSpecial from "../commons/ButtonSpecial";
+import Barsicon from "../../assets/images/icons/bars.svg";
 
 const MainMenu = ({ tipo }) => {
   const [tipomenu, setTipomenu] = useState("");
@@ -23,7 +24,7 @@ const MainMenu = ({ tipo }) => {
     <nav className={navbar ? "navbar-main-inverse" : tipomenu}>
       <div className="container-lg">
         <div className="open-menuresponsive">
-          <img src="#" alt="Boton_Responsive" />
+          <img src={Barsicon} alt="Boton_Responsive" />
         </div>
         <a
           href="http://google.com.ar"
