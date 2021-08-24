@@ -171,11 +171,13 @@ export const MenuContainer = styled.div`
     transition: 0.3s;
     box-shadow: 0px 2px 3px rgba(146, 153, 186, 0.2);
     ${tablet} {
-      top: 0;
+      top: 0px;
+      position: fixed;
     }
 
     ${mobile} {
-      top: 0;
+      top: 0px;
+      position: fixed;
     }
   }
   && .navbar-main-blanco a {
@@ -225,6 +227,15 @@ export const MenuContainer = styled.div`
     width: 200px;
     height: 50px;
     transition: 0.5s;
+    ${tablet} {
+      top: 1rem;
+      background-size: 60%;
+    }
+
+    ${mobile} {
+      background-size: 60%;
+      top: 1rem;
+    }
   }
   /*Estilos div Logo - Inverso */
   && .logo-inverso {

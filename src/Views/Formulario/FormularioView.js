@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Form from "../../components/form/Form";
 import LineState from "../../components/LineState/LineState";
 import { FormViewCointainer } from "./styles/FormularioViewStyles";

@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { FormContainer } from "./styles/FormStyles";
+import { Modal, ModalBody } from "reactstrap";
+import "./styles/Modal.css";
+import CheckIcon from "../../assets/images/icons/checkicon.svg";
 
 const Form = () => {
+  const [Modalok, setModalok] = useState(false);
+  const toggle = (e) => {
+    e.preventDefault();
+
+    setModalok(!Modalok);
+  };
   return (
     <FormContainer>
+      <Modal
+        isOpen={Modalok}
+        toggle={toggle}
+        size="lg"
+        contentClassName="modal-content_rechazo"
+        modalClassName="modal_rechazo"
+      >
+        <ModalBody>
+          <div className="mb-5 iconn">
+            <img src={CheckIcon} className="img-fluid" alt="icon" />
+            <h4 style={{ color: "#fff" }} className="mt-3">
+              ID Registrado: C001459421<br></br> Nivel: Crítico
+            </h4>
+
+            <p className="mt-2">
+              Nuestro equipo de seguimiento está revisando la solicitud de
+              asistencia y tomará contacto con el referente tan pronto como sea
+              posible.
+            </p>
+          </div>
+          <div className="iconn">
+            <button width="200px" className="mt-5 Modal_btn" onClick={toggle}>
+              Volver al Panel
+            </button>
+          </div>
+        </ModalBody>
+      </Modal>
       <form id="siteform">
         <select
           name="sitios"
@@ -131,7 +167,7 @@ const Form = () => {
             </div>
           </label>
         </div>
-        <button className="FormContainer_submit" type="submit">
+        <button className="FormContainer_submit" onClick={toggle}>
           Solicitar asistencia
         </button>
       </form>
