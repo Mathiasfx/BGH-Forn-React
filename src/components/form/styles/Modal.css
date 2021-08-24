@@ -19,7 +19,7 @@
 .modal-content_rechazo {
   position: absolute;
   width: 100%s;
-  top: 10rem;
+  top: 3rem;
   right: 0;
   bottom: 0;
   left: 0;
@@ -81,7 +81,7 @@
   max-width: 648px;
   font-style: normal;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 36px;
   text-align: center;
 
@@ -106,4 +106,12 @@
   color: #fff;
   border: none;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal-body_rechazo p {
+    max-width: 548px;
+    font-size: 1.3rem !important;
+    line-height: 1.5rem !important;
+  }
 }

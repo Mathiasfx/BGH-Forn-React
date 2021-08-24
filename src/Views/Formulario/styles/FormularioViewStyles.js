@@ -6,6 +6,7 @@ export const FormViewCointainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 100%;
 
   & h3 {
     font-family: Roboto;
