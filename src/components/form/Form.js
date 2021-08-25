@@ -6,6 +6,69 @@ import CheckIcon from "../../assets/images/icons/checkicon.svg";
 
 const Form = ({ setDatos, datos, setCompleto }) => {
   const [Modalok, setModalok] = useState(false);
+  const [locales, setLocales] = useState([
+    { nombre: "(C01) CAIF - 25 DE AGOSTO" },
+    { nombre: "(J01) JARDIN - 25 DE AGOSTO" },
+    { nombre: "(J02) JARDIN - LAS PIEDRAS" },
+    { nombre: "(C03) CAIF - VISTA LINDA" },
+    { nombre: "(J03) JARDIN - VISTA LINDA" },
+    { nombre: "(C04) CAIF - LAS PIEDRAS, EL DORADO" },
+    { nombre: "(J04) JARDIN - LAS PIEDRAS, EL DORADO" },
+    { nombre: "(J05) JARDIN - LAS PIEDRAS, OBELISCO" },
+    { nombre: "(J06) JARDIN - LOS AROMOS" },
+    { nombre: "(C07) CAIF - BARROS BLANCOS" },
+    { nombre: "(J07) JARDIN - BARROS BLANCOS" },
+    { nombre: "(J08) JARDIN - LAS PIEDRAS - EXPERIMENTAL" },
+    { nombre: "(J09) JARDIN - MELO" },
+    { nombre: "(J10) JARDIN - VILLA PANCHA" },
+    { nombre: "(J11) JARDIN - BARRIO AEROPARQUE" },
+    { nombre: "(J12) JARDIN - BARRIO HIPODROMO" },
+    { nombre: "(J13) JARDIN - PIRIAPOLIS" },
+    { nombre: "(J14) JARDIN - SANTIAGO VAZQUEZ" },
+    { nombre: "(C15) CAIF - MARACANA" },
+    { nombre: "(J15) JARDIN - MARACANA" },
+    { nombre: "(J16) JARDIN - CAMINO MALDONADO" },
+    { nombre: "(J16) JARDIN - CAMINO MALDONADO" },
+    { nombre: "(J17) JARDIN - LA PALOMA" },
+    { nombre: "(J18) JARDIN - CASABO" },
+    { nombre: "(J19) JARDIN - PARQUE GUARANI" },
+    { nombre: "(J20) JARDIN - PASO DE LA ARENA" },
+    { nombre: "(J21) JARDIN - PAJAS BLANCAS" },
+    { nombre: "(J22) JARDIN - LOS BULEVARES" },
+    { nombre: "(C23) CAIF - SAYAGO" },
+    { nombre: "(J23) JARDIN - SAYAGO" },
+    { nombre: "(J24) JARDIN - MANGA" },
+    { nombre: "(J25) JARDIN - VILLA ESPAÑOLA" },
+    { nombre: "(J26) JARDIN - BELLA ITALIA" },
+    { nombre: "(J27) JARDIN - LAS DURANAS" },
+    { nombre: "(J28) JARDIN - " },
+    { nombre: "(J29) JARDIN - LAS ACACIAS" },
+    { nombre: "(C30) CAIF - RUTA 8 KM 18" },
+    { nombre: "(J30) JARDIN - RUTA 8 KM 18" },
+    { nombre: "(J31) JARDIN - ZONA SUR" },
+    { nombre: "(J32) JARDIN - VELODROMO" },
+    { nombre: "(J33) JARDIN - LA ESTIVA" },
+    { nombre: "(J34) JARDIN - CAPITAL" },
+    { nombre: "(J35) JARDIN - BARRIO URUGUAY" },
+    { nombre: "(J36) JARDIN - BARRIO ARTIGAS" },
+    { nombre: "(J37) JARDIN - BARRIO CONSTITUCION" },
+    { nombre: "(C38) CAIF - LA AMARILLA" },
+    { nombre: "(J38) JARDIN - LA AMARILLA" },
+    { nombre: "(J39) JARDIN - LIBERTAD" },
+    { nombre: "(J40) JARDIN - CIUDAD DEL PLATA" },
+    { nombre: "(J41) JARDIN - CARDONA" },
+    { nombre: "(C42) CAIF - MERCEDES" },
+    { nombre: "(J42) JARDIN - MERCEDES" },
+    { nombre: "(C43) CAIF - BARRIO LOPEZ" },
+    { nombre: "(J43) JARDIN - BARRIO LOPEZ" },
+    { nombre: "(J44) JARDIN - BARRIO ITUZAINGO" },
+    { nombre: "(C45) CAIF - LA PAZ" },
+    { nombre: "(C46) CAIF - CASAVALLE" },
+    { nombre: "(C47) CAIF - VILLA ESPAÑOLA" },
+    { nombre: "(C48) CAIF - PUEBLO ABAYUBA" },
+    { nombre: "(C49) CAIF - BARRIO CEIBAL" },
+  ]);
+
   const toggle = () => {
     setModalok(!Modalok);
   };
@@ -109,19 +172,17 @@ const Form = ({ setDatos, datos, setCompleto }) => {
           <option selected value="Default Value">
             Seleccionar ...
           </option>
-
-          <option className="FormContainer_option" value="C03-CAIF-VISTA-LINDA">
-            (C03) CAIF - VISTA LINDA
-          </option>
-          <option className="FormContainer_option" value="C04-CAIF-CLORINDA">
-            (C04) CAIF - CLORINDA
-          </option>
-          <option className="FormContainer_option" value="C05-CAIF-SANTAFE">
-            (C05) CAIF - SANTA FE
-          </option>
-          <option className="FormContainer_option" value="C06-CAIF-BELGRANO">
-            (C06) CAIF - BELGRANO
-          </option>
+          {locales.map((item, index) => {
+            return (
+              <option
+                className="FormContainer_option"
+                value={item.nombre}
+                key={index}
+              >
+                {item.nombre}
+              </option>
+            );
+          })}
         </select>
         <h3 className=" FormContainer_label">Tipo de Asistencia</h3>
         <select
