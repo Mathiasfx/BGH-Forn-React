@@ -6,12 +6,8 @@ import iconMundo from "../../assets/images/icons/mundo.svg";
 
 import MainMenu from "./MainMenu";
 
-
-
 const Menu = () => {
-    const [navbar, setNabvar] = useState(false);
-
-
+  const [navbar, setNabvar] = useState(false);
 
   //Funcion sube el menu de arriba
   const CambiarMenuScroll = () => {
@@ -38,14 +34,13 @@ const Menu = () => {
             </li>
             <img className="iconos-top" src={iconMundo} alt="icono region" />
             <li>
-              <a href="http://google.com.ar">Argentina</a>
+              <a href="http://google.com.ar">Uruguay</a>
             </li>
           </ul>
         </div>
       </div>
-      
-          <MainMenu tipo='navbar-main-blanco'/>
-      
+
+      <MainMenu tipo="navbar-main-blanco" />
     </MenuContainer>
   );
 };
